@@ -59,11 +59,6 @@ img {
 
 strong { font-weight: var(--fw-bold) }
 
-:focus {
-	outline: 3px solid var(--clr-accent);
-	outline-offset: 3px;
-}
-
 /* Buttons */
 .btn {
 	display: inline-block;
@@ -390,13 +385,7 @@ header {
 		opacity 250ms linear;
 }
 
-.portfolio__item:focus {
-	position: relative;
-	z-index: 2;
-}
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img{
+.portfolio__img:hover {
 	transform: scale(1.2);
 	opacity: 0.75;
 }
