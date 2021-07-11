@@ -15,10 +15,12 @@
 	--clr-light: #fff;
 	--clr-dark: #303030;
 	--clr-accent: #7595C1;
+	--clr-accent2: #0d186e;
 
 	--fs-h1: 3rem;
 	--fs-h2: 2.25rem;
 	--fs-h3: 1.35rem;
+	--fs-h4: 1.2rem;
 	--fs-body: 1rem;
 
 	--bs: 0.25em 0.25em 0.75em rgba(0,0,0, 0.25),
@@ -30,6 +32,7 @@
 		--fs-h1: 4.5rem;
 		--fs-h2: 3.75rem;
 		--fs-h3: 1.5rem;
+		--fs-h4: 1.3rem;
 		--fs-body: 1.125rem;
 	}
 }
@@ -82,7 +85,9 @@ strong { font-weight: var(--fw-bold) }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
 	line-height: 1;
 	margin: 0;
 }
@@ -90,6 +95,12 @@ h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+h4 { font-size: var(--fs-h4);}
+h5 { 
+	font-size: 0.85rem;
+	font-family: var(--ff-secondary);
+	font-weight: var(--fw-reg);
+}
 
 .section__title {
 	margin-bottom: 0.25em;
@@ -359,6 +370,88 @@ header {
 		grid-area: img;
 		position: relative;
 		z-index: 2;
+	}
+}
+
+/* Timeline */
+.my-timeline {
+	width: 100%;
+	background-color: var(--clr-accent);
+	color: var(--clr-light);
+	overflow: hidden;
+}
+
+.section__title--timeline,
+.section__subtitle--timeline {
+	text-align: center;
+}
+
+.section__subtitle--timeline {
+	margin-bottom: 3rem;
+}
+
+.timeline {
+	width: 80%;
+	height: auto;
+	max-width: 1000px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.timeline ul {
+	list-style: none;
+}
+
+.timeline ul li{
+	padding: 20px;
+	background-color: var(--clr-accent2);
+	color: var(--clr-light);
+	border-radius: 10px;
+	margin-bottom: 1.2rem;
+}
+
+timeline ull li:last-child {
+	margin-bottom: 0;
+}
+
+.timeline__content h4 {
+	margin-bottom: 0.5rem;
+}
+
+.timeline__content .date {
+	margin-bottom: 0.5rem;
+	letter-spacing: 2px;
+}
+
+.timeline ul li p {
+	font-size: 1rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+@media(min-width: 600px) {
+	.timeline ul li {
+		width: 50%;
+		margin-bottom: 2rem;
+		position: relative;
+	}
+
+	.timeline ul li:nth-child(odd) {
+		float: left;
+		clear: right;
+		border-radius: 10px 0px 10px 10px;
+	}
+	.timeline ul li:nth-child(even){
+		float: right;
+		clear: left;
+		border-radius: 0px 10px 10px 10px;
+	}
+
+	.timeline__content .date {
+		position: absolute;
+		top:-1.2rem;
 	}
 }
 
