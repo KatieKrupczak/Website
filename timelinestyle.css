@@ -27,21 +27,23 @@
     box-sizing: border-box;
 }
 body {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
 }
 .wrapper {
 	max-width: 1080px;
 	margin: 50px auto;
 	padding: 0 20px;
-	color: var(--clr-light);
+	color: var(--clr-dark);
+    position: relative;
 }
 
 .wrapper .center-line {
 	position: absolute;
 	height: 100%;
 	width: 4px;
-	background: var(--clr-accent);
+	background: var(--clr-light);
 	left: 50%;
+    top: 20px;
 	transform: translateX(-50%);
 }
 
@@ -58,7 +60,7 @@ body {
 }
 
 .wrapper .row section {
-	background: var(--clr-accent);
+	background: var(--clr-light);
 	border-radius: 5px;
 	width: calc(50% - 40px);
 	padding: 20px;
@@ -70,7 +72,7 @@ body {
     content: '';
 	height: 15px;
 	width: 15px;
-	background: var(--clr-accent);
+	background: var(--clr-light);
 	top: 28px;
     z-index: -1;
     transform: rotate(45deg);
@@ -82,6 +84,28 @@ body {
 
 .row-2 section::before {
 	left: -7px;
+}
+
+.row section .icon {
+    position: absolute;
+    background: #f2f2f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--clr-accent);
+    top: 13px;
+    font-size: 17px;
+    box-shadow: 0 0 0 4px var(--clr-light), inset 0 2px 0 rgba(0,0,0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.row-1 section .icon {
+    right: -60px;
+}
+
+.row-2 section .icon {
+    left: -60px;
 }
 
 .row section .details,
@@ -102,7 +126,7 @@ body {
 
 .row section .bottom a{
 	text-decoration: none;
-	background: var(--clr-dark);
+	background: var(--clr-accent);
 	color: var(--clr-light);
 	padding: 7px 15px;
 	border-radius: 5px;
